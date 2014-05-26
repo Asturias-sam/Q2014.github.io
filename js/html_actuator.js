@@ -125,8 +125,15 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 };
 
 HTMLActuator.prototype.message = function (won) {
+if (this.score<0) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var message = won ? "You win! but not a PERFECT ZERO SCORE" : "ERROR 404 WINNER NOT FOUND";
+}
+else
+{
+  var type    = won ? "game-won" : "game-over";
+  var message = won ? "Now You Realize achiveing ZERO also make you feel HAPPY!!!" : "ERROR 404 WINNER NOT FOUND"; 
+}
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
