@@ -69,7 +69,7 @@ KeyboardInputManager.prototype.listen = function () {
   });
 
   // Respond to button presses
-  this.bindButtonPress(".retry-button", this.restart);
+  
   this.bindButtonPress(".restart-button", this.restart);
   
 
